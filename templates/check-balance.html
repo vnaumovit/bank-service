@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Check Balance</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 40px; color: #333; }
+        .container {
+            max-width: 400px; margin: auto; background: #f9f9f9; padding: 20px 30px;
+            border-radius: 8px; box-shadow: 0 2px 6px rgba(0,0,0,0.1); text-align: center;
+        }
+        h1 { color: #007acc; margin-bottom: 20px; }
+        input[type="text"] {
+            width: 100%; padding: 10px; margin-top: 10px; border: 1px solid #ccc;
+            border-radius: 5px; box-sizing: border-box;
+        }
+        button {
+            margin-top: 20px; width: 100%; background-color: #007acc; border: none;
+            padding: 12px; border-radius: 5px; color: white; font-size: 16px; cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover { background-color: #005fa3; }
+        a.home-link {
+            display: block; margin-top: 15px; color: #007acc; text-decoration: none;
+        }
+        a.home-link:hover { text-decoration: underline; }
+        .error { color: red; margin-top: 15px; }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Check Your Balance</h1>
+    {{if .Error}}
+    <p class="error">{{.Error}}</p>
+    {{end}}
+    <form method="POST" action="/check-balance">
+        <input type="text" name="name" placeholder="Enter your account name" required />
+        <button type="submit">Check Balance</button>
+    </form>
+    <a class="home-link" href="/">Home</a>
+</div>
+</body>
+</html>

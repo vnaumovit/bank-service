@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Bank Home</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f0f8ff;
+            margin: 40px;
+            color: #333;
+        }
+        .container {
+            max-width: 450px;
+            background: white;
+            padding: 30px 40px;
+            border-radius: 8px;
+            box-shadow: 0 3px 8px rgba(0,0,0,0.1);
+            margin: auto;
+            text-align: center;
+        }
+        h1 {
+            color: #007acc;
+            margin-bottom: 30px;
+        }
+        a.button {
+            display: block;
+            background-color: #007acc;
+            color: white;
+            padding: 15px 0;
+            margin: 10px 0;
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+        a.button:hover {
+            background-color: #005fa3;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h1>Welcome to Your Bank</h1>
+    <a class="button" href="/create">➕ Create Account</a>
+    <a class="button" href="/deposit">💰 Deposit</a>
+    <a class="button" href="/withdraw">💸 Withdraw</a>
+    <a class="button"  href="/check-balance">📊 Check Balance</a>
+</div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Account Balance</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: #f0f4f8;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .balance-card {
+            background: white;
+            padding: 30px 40px;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            text-align: center;
+            width: 320px;
+        }
+        h1 {
+            color: #004a99;
+            margin-bottom: 20px;
+        }
+        .amount {
+            font-size: 3rem;
+            font-weight: 700;
+            color: #2e7d32;
+            margin-bottom: 25px;
+        }
+        a {
+            text-decoration: none;
+            color: #007acc;
+            font-weight: 600;
+            border: 1px solid #007acc;
+            padding: 10px 20px;
+            border-radius: 6px;
+            transition: background-color 0.3s ease;
+            display: inline-block;
+        }
+        a:hover {
+            background-color: #007acc;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+<div class="balance-card">
+    <h1>Balance for {{.Name}}</h1>
+    <div class="amount">$ {{printf "%.2f" .Balance}}</div>
+    <a href="/">Home</a>
+</div>
+</body>
+</html>
